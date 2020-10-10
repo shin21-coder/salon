@@ -1,0 +1,622 @@
+@import "./_reset.scss";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;400&display=swap');
+body{
+  font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+}
+header{
+  position: relative;
+  min-width: 1173px;
+  width: 90vw;
+  & img{
+    width: 100%;
+  }
+}
+.header{
+  &__textbox{
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    text-orientation: upright; /* すべて縦方向に表示 */
+    position: absolute;
+    background-color: white;
+    top: 205px;
+    right: 0;
+    padding:56px;
+    font-size: 20px;
+    color:#292929;
+
+  }
+
+  &__text{
+    // padding-right: 25px;
+    letter-spacing: 0.3em;
+    line-height: 2.56;
+  }
+
+  &__logobox{
+    padding:13.1px 32.7px;
+    background-color: white;
+    position: absolute;
+    top: 69px;
+    left: 0;
+  }
+
+  &__lists{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 13px;
+    font-weight:100 ;
+    color: #292929;
+  }
+
+  &__nav{
+    background: white;
+    padding:33px 53px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  &__list{
+    padding:0 21px;
+    cursor: pointer;
+    position: relative;
+
+    &:hover::after{
+      content:"";
+      background: #004286;
+      width: 80%;
+      height: 1px;
+      position: absolute;
+      bottom: -7px;
+      left: 8px;
+  }
+    
+  }
+  &__lists{
+ 
+    display: flex;
+    z-index: 22;
+  }
+
+  &__mail{
+    position: absolute;
+    top: 23px;
+    right: -96px;
+    border: 1px solid #707070;
+    border-radius: 50px;
+    cursor: pointer;
+
+    & img{
+      padding: 22px 20px;
+    }
+    &:hover{
+      box-shadow: 4px 4px #292929;
+    }
+  }
+
+
+}
+
+.about{
+
+  margin:107px 68px 200px 95px;
+  &__flex{
+    display: flex;
+    align-items: center;
+  }
+
+  &__scrums{
+    margin-left: 56.5px;
+    width: 50%;
+  }
+
+  &__image{
+    & img{
+      width: 100%;
+    }
+  }
+
+  &__theme{
+    display: flex;
+    align-items: center;
+    padding-bottom: 17px;
+    position: relative;
+
+    &::after{
+      content: "";
+      position: absolute;
+      width: 319px; 
+      height: 1px;
+      background-color: #004286;
+      bottom: 0;
+      left: 20px;
+    }
+  }
+
+  &__concept{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    margin-right: 34px;
+  }
+
+  &__maintheme{
+    font-size: 40px;
+  }
+
+  &__text{
+    margin-top: 88px;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    font-size: 14px;
+    line-height: 1.86;
+  }
+}
+
+.service{
+  margin:0 125px 0 100px;
+  &__themebox{
+    display: flex;
+    align-items: center;
+    padding-bottom: 17px;
+    position: relative;
+    justify-content: center;
+
+
+    &::after{
+      content: "";
+      position: absolute;
+      width: 400px; 
+      height: 1px;
+      background-color: #004286;
+      bottom: 0;
+
+    }
+  }
+
+  &__service{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    margin-right: 34px;
+  }
+
+  &__wecan{
+    font-size: 40px;
+  }
+
+  &__flex{
+    display: flex;
+    justify-content: center;
+    margin-top:82.5px;
+  }
+
+  &__box{
+    margin-right: 47px;
+    &:last-child{
+      margin: 0;
+    }
+  }
+
+  &__theme{
+    font-size: 20px;
+    padding:11px 0 11px 20.7px;
+    border-left:2px solid #002869;
+    margin-bottom: 32.7px;
+  }
+
+  &__text{
+    margin-top: 29px;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+.works{
+  margin:150px 125px 0 100px;
+  &__themebox{
+    display: flex;
+    align-items: center;
+    padding-bottom: 17px;
+    position: relative;
+    justify-content: center;
+    margin-bottom: 70px;
+
+
+    &::after{
+      content: "";
+      position: absolute;
+      width: 400px; 
+      height: 1px;
+      background-color: #004286;
+      bottom: 0;
+
+    }
+  }
+
+  &__service{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    margin-right: 34px;
+  }
+
+  &__wecan{
+    font-size: 40px;
+  }
+
+  &__image{
+    & p{
+      margin-top:24px ;
+      margin-left: 20px;
+    }
+  }
+}
+/*slick setting*/
+// .slick{
+//   position: relative;
+// }
+.slider{
+  // max-width: 687px;
+  margin:0 auto;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: #000;
+}
+
+.slide-arrow{
+  position: absolute;
+  top: 35%;
+  left: -5%;
+  margin-top: -15px;
+}
+.prev-arrow{
+  position: absolute;
+  left: 102%;
+}
+
+.block {
+  overflow: hidden;
+  margin: 100px auto 0;
+}
+
+.slider img {
+  transform: scale(0.8);
+  opacity: 0.3;
+  transition: 0.5s;
+
+}
+
+.slider .slick-center img {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.text li {
+  opacity: 0;
+  text-align: center;
+  animation-delay: 0.5s;
+  animation-duration: 1.0s;
+  animation-fill-mode: both;
+}
+
+ .text li.slick-active {
+  animation-name: open;
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes close {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.works__image{
+  margin-right:30px;
+}
+
+.project{
+  margin:150px 4.5% 0 4%;
+  &__themebox{
+    display: flex;
+    align-items: center;
+    padding-bottom: 17px;
+    position: relative;
+    justify-content: center;
+    margin-bottom: 70px;
+
+
+    &::after{
+      content: "";
+      position: absolute;
+      width: 400px; 
+      height: 1px;
+      background-color: #004286;
+      bottom: 0;
+
+    }
+  }
+
+  &__service{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    margin-right: 34px;
+  }
+
+  &__wecan{
+    font-size: 40px;
+  }
+
+  &__box{
+    width: 20%;
+    text-align: center;
+    margin-right: 50px;
+    margin-bottom:10%;
+  }
+  &__step{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+  }
+  &__theme{
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    font-size: 20px;
+    position: relative;
+    padding:18px 0;
+
+    &::after{
+      content: "";
+      position: absolute;
+      width: 100%; 
+      height: 1px;
+      background-color: #004286;
+      bottom: 0;
+      left: 0;
+
+    }
+  }
+  &__text{
+    font-size: 14px;
+    margin-top:18px;
+    text-align: left;
+    line-height: 1.28;
+    position: relative;
+
+    &::after{
+      content: "";
+      position: absolute;
+      top: 7px;
+      right: -30px;
+      background-image: url(../images/project.png);
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__last::after{
+
+    display: none;
+  }
+}
+
+.member{
+  margin:150px 125px 0 100px;
+  &__themebox{
+    display: flex;
+    align-items: center;
+    padding-bottom: 17px;
+    position: relative;
+    justify-content: center;
+    margin-bottom: 70px;
+
+
+    &::after{
+      content: "";
+      position: absolute;
+      width: 400px; 
+      height: 1px;
+      background-color: #004286;
+      bottom: 0;
+
+    }
+  }
+  &__service{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    margin-right: 34px;
+  }
+
+  &__wecan{
+    font-size: 40px;
+  }
+
+  &__image{
+    width: 250px;
+    margin-right: 27px;
+  }
+
+  &__people{
+    font-size: 20px;
+    padding:28px 0;
+    position: relative;
+  }
+  &__people{
+    
+    &::after{
+      content: "";
+      position: absolute;
+      width: 100%; 
+      height: 1px;
+      background-color: #004286;
+      bottom: 0;
+      left: 0;
+
+    }
+  }
+  &__text{
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    font-size: 14px;
+    margin-top:28px;
+    text-align: left;
+    line-height: 1.48;
+  }
+}
+.slick{
+  max-width:830px;
+  text-align: center;
+  margin:0 auto;
+}
+
+.contact{
+  margin:150px 100px 0 100px;
+  &__themebox{
+    display: flex;
+    align-items: center;
+    padding-bottom: 17px;
+    position: relative;
+    justify-content: center;
+    margin-bottom: 70px;
+
+
+    &::after{
+      content: "";
+      position: absolute;
+      width: 400px; 
+      height: 1px;
+      background-color: #004286;
+      bottom: 0;
+
+    }
+  }
+  &__service{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    margin-right: 34px;
+  }
+
+  &__wecan{
+    font-size: 40px;
+  }
+
+  &__wrapper{
+    margin:0 auto;
+    width: 46%;
+  }
+
+  & dt{
+    font-size: 18px;
+    font-weight: normal;
+    position: relative;
+    margin-left:5px;
+    &::before{
+      content:"";
+      position: absolute;
+      top:0;
+      left: -4px;
+      width: 1px;
+      height: 17.32px;
+      background-color: #004286;
+    }
+  }
+  
+  & textarea{
+    border:1px solid #707070;
+    width: 100%;
+    padding:9px 17px;
+    margin:12px 0 40px;
+  }
+  &__input{
+border:1px solid #707070;
+padding:9px 17px;
+width: 100%;
+margin:12px 0 40px;
+}
+}
+
+.submit__button{
+  width: 20%;
+  text-align: center;
+  color:#fff;
+  background-color: #004286;
+  margin: 10px auto 10px;
+  padding: 18px 85px 18px 57px;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  :hover{
+    box-shadow: 4px 4px #292929;
+  }
+
+}
+
+footer{
+  text-align: center;
+  background-color: #004286;
+  padding:23px 0;
+  color:white;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; 
+  font-weight: 300;
+
+}
+
+#goto_top {
+  position: fixed;
+  right: 10%;
+  bottom: 10%;
+  cursor: pointer;
+
+}
+#goto_top:hover{
+  box-shadow: 4px 4px #292929;
+}
+
+.submit__button:hover{
+  box-shadow: 4px 4px #292929;
+}
+
+// #goto_top a {
+//   width: 100px;
+//   height: 100px;
+//   border-radius: 20px;
+//   background: #004286;
+//   display: block;
+//   color: #fff;
+//   text-align: center;
+//   line-height: 100px;
+//   text-decoration: none;
+//   font-weight: bold;
+// }       
+
+#global-nav.m_fixed {
+  left: 0;
+  position: fixed;
+  top: 0;
+  height: 80px;
+  z-index: 100000;
+}
+
+.fadein {
+  opacity : 0;
+  transform: translateY(20px);
+  transition: all 1s;
+}
