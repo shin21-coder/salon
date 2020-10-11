@@ -2,10 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;400&display=swap');
 body{
   font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+  overflow-x: hidden;
+  @media(max-width:600px){
+    background-color: #F0F1F2;
+  }
 }
 header{
   position: relative;
-  min-width: 1173px;
+  // min-width: 1173px;
   width: 90vw;
   & img{
     width: 100%;
@@ -83,6 +87,9 @@ header{
     border: 1px solid #707070;
     border-radius: 50px;
     cursor: pointer;
+    @media(max-width:900px){
+      display: none;
+    }
 
     & img{
       padding: 22px 20px;
@@ -98,19 +105,48 @@ header{
 .about{
 
   margin:107px 68px 200px 95px;
+  @media (max-width:700px){
+    margin:10% 5% 10% 0;
+  }
   &__flex{
     display: flex;
     align-items: center;
+    @media (max-width:700px){
+      display: block;
+      position: relative;
+    }
   }
 
   &__scrums{
     margin-left: 56.5px;
-    width: 50%;
+    width: 80%;
+    @media (max-width:700px){
+      position: absolute;
+      left: 20px;
+      background-color: white;
+      z-index: 3;
+      padding: 4% 11%;
+      margin: 0 auto;
+      top: 186px;
+      width: 350px;
+
+    }
+
+
   }
 
-  &__image{
-    & img{
-      width: 100%;
+  &__pcimage{
+    width: 100%;
+    @media (max-width:700px){
+      display: none;
+    }
+  }
+  &__spimage{
+    display: none;
+    @media (max-width:700px){
+      display: block;
+  
+    
     }
   }
 
@@ -119,6 +155,9 @@ header{
     align-items: center;
     padding-bottom: 17px;
     position: relative;
+    @media (max-width:700px){
+      justify-content: center;
+    }
 
     &::after{
       content: "";
@@ -128,6 +167,11 @@ header{
       background-color: #004286;
       bottom: 0;
       left: 20px;
+      @media(max-width:700px){
+        width: 216px;
+        left: 10px;
+       
+      }
     }
   }
 
@@ -136,14 +180,22 @@ header{
     font-weight: normal;
     font-size: 16px;
     margin-right: 34px;
+    @media (max-width:700px) {
+      font-size:8px ;
+      
+    }
   }
 
   &__maintheme{
     font-size: 40px;
+    @media (max-width:700px) {
+      font-size:21px ;
+      
+    }
   }
 
   &__text{
-    margin-top: 88px;
+    margin-top: 50px;
     font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
     font-size: 14px;
     line-height: 1.86;
@@ -151,7 +203,10 @@ header{
 }
 
 .service{
-  margin:0 125px 0 100px;
+  margin:0 auto;
+  @media(max-width:700px){
+    margin:102% 0 0 0;
+  }
   &__themebox{
     display: flex;
     align-items: center;
@@ -176,23 +231,42 @@ header{
     font-weight: normal;
     font-size: 16px;
     margin-right: 34px;
+    @media(max-width:470px){
+      font-size: 8px;
+    }
   }
 
   &__wecan{
     font-size: 40px;
+    @media(max-width:470px){
+      font-size: 20px;
+    }
   }
 
   &__flex{
     display: flex;
     justify-content: center;
     margin-top:82.5px;
+    @media (max-width:1100px){
+      display: block;
+  
+    }
   }
 
   &__box{
     margin-right: 47px;
+    background-color: white;
+    @media(max-width:1100px){
+      display: flex;
+      margin: 5% 0;
+      & img{
+        width: 50%;
+      }
+    }
     &:last-child{
       margin: 0;
     }
+    
   }
 
   &__theme{
@@ -200,6 +274,28 @@ header{
     padding:11px 0 11px 20.7px;
     border-left:2px solid #002869;
     margin-bottom: 32.7px;
+    color:#606060;
+    @media(max-width:1100px){
+      display: none;
+    }
+  }
+  &__theme-sp{
+    font-size: 20px;
+    padding:11px 0 11px 20.7px;
+    border-left:2px solid #002869;
+    margin-bottom: 32.7px;
+    color:#606060;
+    display: none;
+    @media(max-width:1100px){
+      display: block;
+    }
+    @media(max-width:470px){
+      font-size: 13px;
+    }
+  }
+  &__spblock{
+    padding-left: 20px;
+    width: 50%;
   }
 
   &__text{
@@ -207,11 +303,19 @@ header{
     font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
     font-size: 14px;
     line-height: 1.5;
+    @media(max-width:470px){
+      font-size: 11px;
+    }
   }
 }
 
 .works{
   margin:150px 125px 0 100px;
+  @media (max-width:600px){
+    margin:150px 0 0 0;
+    padding:100px 50px;
+  }
+  background-color: white;
   &__themebox{
     display: flex;
     align-items: center;
@@ -237,10 +341,16 @@ header{
     font-weight: normal;
     font-size: 16px;
     margin-right: 34px;
+    @media(max-width:470px){
+      font-size: 8px;
+    }
   }
 
   &__wecan{
     font-size: 40px;
+    @media(max-width:470px){
+      font-size: 20px;
+    }
   }
 
   &__image{
@@ -255,7 +365,7 @@ header{
 //   position: relative;
 // }
 .slider{
-  // max-width: 687px;
+  max-width: 687px;
   margin:0 auto;
 }
 .slick-prev:before,
@@ -321,12 +431,18 @@ header{
   }
 }
 
-.works__image{
-  margin-right:30px;
+.works__margin{
+  margin-right: 30px;
 }
 
+// .works__image{
+//   margin-right:30px;
+// }
+
 .project{
-  margin:150px 4.5% 0 4%;
+  margin-top:50px;
+  padding:50px 4.5% 0 4%;
+  background-color: white;
   &__themebox{
     display: flex;
     align-items: center;
@@ -352,10 +468,16 @@ header{
     font-weight: normal;
     font-size: 16px;
     margin-right: 34px;
+    @media(max-width:470px){
+      font-size: 8px;
+    }
   }
 
   &__wecan{
     font-size: 40px;
+    @media(max-width:470px){
+      font-size: 20px;
+    }
   }
 
   &__box{
@@ -363,6 +485,11 @@ header{
     text-align: center;
     margin-right: 50px;
     margin-bottom:10%;
+    @media(max-width:600px){
+      width: 80%;
+      text-align: center;
+      margin:0 auto 10% auto;
+    }
   }
   &__step{
     font-family: 'Josefin Sans', sans-serif;
@@ -402,6 +529,9 @@ header{
       background-repeat: no-repeat;
       width: 20px;
       height: 20px;
+      @media(max-width:600px){
+        display: none;
+      }
     }
   }
 
@@ -409,6 +539,9 @@ header{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    @media(max-width:600px){
+      display: block;
+    }
   }
 
   &__last::after{
@@ -418,7 +551,12 @@ header{
 }
 
 .member{
-  margin:150px 125px 0 100px;
+  background-color: white;
+  margin:250px 0 0 0;
+  @media(max-width:600px){
+    margin: 250px 0 0 0;
+    padding: 50px 10% 0 10%;
+  }
   &__themebox{
     display: flex;
     align-items: center;
@@ -443,15 +581,21 @@ header{
     font-weight: normal;
     font-size: 16px;
     margin-right: 34px;
+    @media(max-width:470px){
+      font-size: 8px;
+    }
   }
 
   &__wecan{
     font-size: 40px;
+    @media(max-width:470px){
+      font-size: 20px;
+    }
   }
-
-  &__image{
-    width: 250px;
-    margin-right: 27px;
+  
+  &__margin{
+    margin-right: 20px;
+    width: 275px;
   }
 
   &__people{
@@ -487,7 +631,12 @@ header{
 }
 
 .contact{
-  margin:150px 100px 0 100px;
+  margin:250px 0 0 0;
+  background-color: white;
+  @media(max-width:600px){
+    margin: 250px 0 0 0;
+    padding: 50px 10% 10% 10%;
+  }
   &__themebox{
     display: flex;
     align-items: center;
@@ -512,15 +661,24 @@ header{
     font-weight: normal;
     font-size: 16px;
     margin-right: 34px;
+    @media(max-width:470px){
+      font-size: 8px;
+    }
   }
 
   &__wecan{
     font-size: 40px;
+    @media(max-width:470px){
+      font-size: 20px;
+    }
   }
 
   &__wrapper{
     margin:0 auto;
     width: 46%;
+    @media (max-width:600px){
+      width: 80%;
+    }
   }
 
   & dt{
@@ -593,30 +751,135 @@ footer{
 .submit__button:hover{
   box-shadow: 4px 4px #292929;
 }
-
-// #goto_top a {
-//   width: 100px;
-//   height: 100px;
-//   border-radius: 20px;
-//   background: #004286;
-//   display: block;
-//   color: #fff;
-//   text-align: center;
-//   line-height: 100px;
-//   text-decoration: none;
-//   font-weight: bold;
-// }       
-
 #global-nav.m_fixed {
   left: 0;
   position: fixed;
   top: 0;
   height: 80px;
   z-index: 100000;
+  @media(max-width:800px){
+    display: none !important;
+  }
 }
 
 .fadein {
   opacity : 0;
   transform: translateY(20px);
   transition: all 1s;
+}
+
+// ここからヘッダーの改造、本当は上に書けばよかった。。。後悔
+
+.header__sp{
+  position: fixed;
+  height: 50px;
+  background-color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 100;
+  width: 100vw;
+  z-index: 999999;
+  display: none;
+  @media(max-width:800px){
+    display: block;
+  }
+}
+.header__toggle{
+// position: relative;
+  margin:20px 100px;
+  text-align: right;
+
+}
+.header{
+  
+&__text{
+  @media(max-width: 1160px){
+
+    writing-mode: horizontal-tb;
+  }
+}
+&__textbox{
+  @media(max-width: 1160px){
+
+    writing-mode: horizontal-tb;
+    padding:3%;
+    font-size: 13px;
+  }
+}
+&__nav{
+  @media(max-width:800px){
+    display: none;
+  }
+}
+}
+
+.nav_toggle{
+  display: block;
+  position: relative;
+  width: 1.75rem;
+  height: 1.5rem;
+  left: 90vw;
+  top: -36px;
+
+  & i {
+    position: absolute;
+    width:100%;
+    height: 2px;
+    background: #707070;
+    border-radius: 10px;
+    -webkit-transition: all 400ms;
+    transition: all 400ms
+}
+
+  & i:nth-child(1){
+
+    top:0;
+  }
+  & i:nth-child(2){
+
+    top:10px;
+  }
+}
+
+.nav_toggle.show i:nth-child(1) {
+  transform: translateY(11px) rotate(-45deg);
+}
+.nav_toggle.show i:nth-child(2) {
+  transform: translateY(0px) rotate(45deg);
+}
+
+nav {
+  position: fixed;
+  top: 3rem;
+  width: 80%;
+  right: 0;
+  bottom: 0;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s, visibility .5s;
+  text-align: center;
+  background-color: white;
+  opacity: .9;
+  z-index: 999999999999999;
+}
+.nav.show {
+  visibility: visible;
+}
+.nav_menu_li{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  font-weight:100 ;
+  color: #292929;
+  cursor: pointer;
+  position: relative;
+  margin:20% 0;
+  &:hover::after{
+    content: "";
+    background: #004286;
+    width: 34%;
+    height: 1px;
+    position: absolute;
+    bottom: -7px;
+    left: 118px;
+  }
 }

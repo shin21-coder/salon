@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="css/slick.css" />
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <header> 
-    <img src="images/header.png" alt="header画像">
+  <header>
+    <div class="header__sp">
+      <p class="header__toggle">MENU OPEN
+        <div class="nav_toggle">
+        <i></i>
+        <i></i>
+      </div>
+    </p>
+    </div>
+    <nav class="nav" id="nav">
+      <ul class="nav_menu_ul">
+        <li class="nav_menu_li">CONCEPT
+        </li>
+        <li class="nav_menu_li">SERVICE</li>
+        <li class="nav_menu_li">WORKS</li>
+        <li class="nav_menu_li">PROJECTFLOW</li>
+        <li class="nav_menu_li">VOICE</li>
+        <li class="nav_menu_li">MEMBER</li>
+      </ul>
+
+    </nav>
+    <!-- <img src="images/spheader.png" alt="header画像" class="header__spimage"> -->
+    <img src="images/header.png" alt="header画像" class="header__pcimage">
     <div class="header__textbox">
       <p class="header__text">企画から運用まで</p>
       <p class="header__text">あなたの会社の一員として</p>
@@ -38,8 +61,8 @@
   <section class="about fadein">
     <div class="about__flex">
       <div class="about__image">
-
-        <img src="images/about.png" alt="scrumsとは">
+        <img src="images/scrums-sp.png" alt="scrumsとは" class="about__spimage">
+        <img src="images/about.png" alt="scrumsとは" class="about__pcimage">
       </div>
       <div class="about__scrums">
         <div class="about__theme">
@@ -48,16 +71,16 @@
         </div>
         <p class="about__text">
           “今の時代ホームページは必要”<br>
-でもネットに詳しくないからなかなか手が出せない。<br>
-そんな方向けに、丁寧なサポートで<br>
-制作をお手伝いさせていただくのがSCRUMsです。<br>
-ネットの知識がなくても、御社のご状況に合わせて効果的なWEB活用法をご提案いたします。
+          でもネットに詳しくないからなかなか手が出せない。<br>
+          そんな方向けに、丁寧なサポートで<br>
+          制作をお手伝いさせていただくのがSCRUMsです。<br>
+          ネットの知識がなくても、御社のご状況に合わせて効果的なWEB活用法をご提案いたします。
         </p>
       </div>
     </div>
   </section>
 
-  <section class="service">
+  <section class="service fadein">
     <div class="service__themebox">
       <h2 class="service__service">SERVICE</h2>
       <p class="service__wecan">私たちのできること</p>
@@ -66,38 +89,69 @@
       <div class="service__box">
         <h3 class="service__theme">ホームページ企画・制作</h3>
         <img src="images/hp.png" alt="homepage企画">
-        <p class="service__text">お客様の事業発展に繋がる<br>
-          WEB活用法を企画します。</p>
+        <div class="service__spblock">
+
+          <h3 class="service__theme-sp">ホームページ企画・制作</h3>
+          <p class="service__text">お客様の事業発展に繋がる<br>
+            WEB活用法を企画します。</p>
+
+        </div>
       </div>
       <div class="service__box">
         <h3 class="service__theme">ネットショップ構築</h3>
         <img src="images/shop.png" alt="ネットショップ">
-        <p class="service__text">お客様のブランドに合わせた<br>
-          ネットショップを作成いたします。</p>
+
+        <div class="service__spblock">
+
+          <h3 class="service__theme-sp">ネットショップ構築</h3>
+          <p class="service__text">お客様のブランドに合わせた<br>
+            ネットショップを作成いたします。</p>
+
+        </div>
       </div>
       <div class="service__box">
         <h3 class="service__theme">サイト更新・サーバー管理</h3>
         <img src="images/network.png" alt="network">
-        <p class="service__text">サーバー契約、管理業務、サポート、ホームページ更新も行います。</p>
+        <div class="service__spblock">
+
+          <h3 class="service__theme-sp">サイト更新・サーバー管理</h3>
+          <p class="service__text">サーバー契約、管理業務、サポート、<br>ホームページ更新も行います。</p>
+
+        </div>
       </div>
     </div>
   </section>
-  <section class="works">
+  <section class="works fadein">
     <div class="works__themebox">
       <h2 class="works__service">WORKS</h2>
       <p class="works__wecan">制作実績</p>
     </div>
     <ul class="slider">
-      <div class="works__image"><img src="images/norikoe.png" alt="挫折乗り越えサロン"><p>挫折乗り越えサロン様</p></div>
-      <div class="works__image"><img src="images/little-square.png" alt="リトルスクエア">
-        <p>Cafe Attraction<br>
-          LTTLE SQUARE<br>
-          (リトルスクエア様)</p></div>
-          <div class="works__image"><img src="images/aruku.png" alt="挫折乗り越えサロンのあるきかた"><p>挫折乗り越えサロン様</p></div>
-      <div class="works__image"><img src="images/eminaru.png" alt="えみなる保育園"><p>えみなる保育園様</p></div>
+      <li class="works__image">
+        <div class="works__margin"><img src="images/norikoe.png" alt="挫折乗り越えサロン">
+          <p>挫折乗り越えサロン様</p>
+        </div>
+      </li>
+      <li class="works__image">
+        <div class="works__margin"><img src="images/little-square.png" alt="リトルスクエア">
+          <p>Cafe Attraction<br>
+            LTTLE SQUARE<br>
+            (リトルスクエア様)</p>
+        </div>
+      </li>
+      <li class="works__image">
+        <div class="works__margin"><img src="images/aruku.png" alt="挫折乗り越えサロンのあるきかた">
+          <p>挫折乗り越えサロン様</p>
+        </div>
+      </li>
+      <li class="works__image">
+        <div class="works__margin"><img src="images/eminaru.png" alt="えみなる保育園">
+          <p>えみなる保育園様</p>
+        </div>
+      </li>
     </ul>
   </section>
-  <section class="project">
+  <section class="project fadein">
     <div class="project__themebox">
       <h2 class="project__service">PROJECT FLOW</h2>
       <p class="project__wecan">制作の流れ</p>
@@ -160,11 +214,11 @@
     </div>
   </section>
 
-  <section class="about">
+  <section class="about fadein">
     <div class="about__flex">
       <div class="about__image">
-
-        <img src="images/voice.png" alt="お客様の声">
+        <img src="images/voice-sp.png" alt="お客様の声" class="about__spimage">
+        <img src="images/voice.png" alt="お客様の声" class="about__pcimage">
       </div>
       <div class="about__scrums">
         <div class="about__theme">
@@ -178,7 +232,7 @@
     </div>
   </section>
 
-  <section class="member">
+  <section class="member fadein">
     <div class="member__themebox">
       <h2 class="member__service">MEMBER</h2>
       <p class="member__wecan">制作メンバー</p>
@@ -186,29 +240,45 @@
 
     <ul class="slick">
       <li class="member__image">
-        <img src="images/kinu.png" alt="小川きぬ">
-        <p class="member__people">小川きぬ / ディレクター</p>
-        <p class="member__text">千葉大学を卒業後、大手ITコンサル会社に就職。2年目でフリーランスエンジニアに転向し、現在はホームページやECサイト制作のディレクションからコーディングまでを担当。</p>
+        <div class="member__margin">
+
+          <img src="images/kinu.png" alt="小川きぬ">
+          <p class="member__people">小川きぬ / ディレクター</p>
+          <p class="member__text">千葉大学を卒業後、大手ITコンサル会社に就職。2年目でフリーランスエンジニアに転向し、現在はホームページやECサイト制作のディレクションからコーディングまでを担当。</p>
+
+        </div>
       </li>
       <li class="member__image">
-        <img src="images/tanaka.png" alt="田中龍">
-        <p class="member__people">田中龍 / エンジニア</p>
-        <p class="member__text">高卒で大手の工場に就職。その後北海道の競走馬育成牧場に転職し、現在は大阪のWEB制作会社にコーダーとして勤務。馬に乗るのが好きです。</p>
+        <div class="member__margin">
+
+          <img src="images/tanaka.png" alt="田中龍">
+          <p class="member__people">田中龍 / エンジニア</p>
+          <p class="member__text">高卒で大手の工場に就職。その後北海道の競走馬育成牧場に転職し、現在は大阪のWEB制作会社にコーダーとして勤務。馬に乗るのが好きです。</p>
+
+        </div>
       </li>
       <li class="member__image">
-        <img src="images/roba.png" alt="遠藤綾香">
-        <p class="member__people">遠藤綾香 / デザイナー</p>
-        <p class="member__text">「会いにいけるWebデザイナー」としてカフェ店員とWebデザイナー2足のわらじで活動中。</p>
+        <div class="member__margin">
+
+          <img src="images/roba.png" alt="遠藤綾香">
+          <p class="member__people">遠藤綾香 / デザイナー</p>
+          <p class="member__text">「会いにいけるWebデザイナー」としてカフェ店員とWebデザイナー2足のわらじで活動中。</p>
+
+        </div>
       </li>
       <li class="member__image">
-        <img src="images/masa.png" alt="小川匡教">
-        <p class="member__people">小川匡教 / エンジニア</p>
-        <p class="member__text">東京大学大学院卒業後、大手IT企業に就職。現在はフリーランスエンジニアとして活動し、ホームページ制作や顧客管理・売上管理システムの開発など幅広く経験。</p>
+        <div class="member__margin">
+          <img src="images/masa.png" alt="小川匡教">
+          <p class="member__people">小川匡教 / エンジニア</p>
+          <p class="member__text">東京大学大学院卒業後、大手IT企業に就職。現在はフリーランスエンジニアとして活動し、ホームページ制作や顧客管理・売上管理システムの開発など幅広く経験。</p>
+
+
+        </div>
       </li>
     </ul>
   </section>
 
-  <section class="contact">
+  <section class="contact fadein">
     <div class="contact__themebox">
       <h2 class="contact__service">CONTACT US</h2>
       <p class="contact__wecan">お問い合わせ</p>
@@ -223,24 +293,26 @@
           </dd>
           <dt> メールアドレス</dt>
           <dd>
-            <input name="email" type="email" required="required" id="email" placeholder="メールアドレス" class="contact__input">
+            <input name="email" type="email" required="required" id="email" placeholder="メールアドレス"
+              class="contact__input">
           </dd>
           <dt> お問い合わせ内容</dt>
           <dd>
-            <textarea name="content" required="required" id="content" placeholder="お問い合わせ内容" rows="10" cols="40" class="contact__input"></textarea>
+            <textarea name="content" required="required" id="content" placeholder="お問い合わせ内容" rows="10" cols="40"
+              class="contact__input"></textarea>
           </dd>
           <input type="hidden" id="token" name="token" value="1234567" />
         </dl>
-        <p id="submit_button_cover" >
+        <p id="submit_button_cover">
           <input name="submit_buton" type="submit" id="submit_button" value="送信" class="submit__button">
         </p>
-   </form>
+      </form>
     </div>
   </section>
 
   <div id="goto_top" style="display: none;">
     <a href="#"><img src="images/upper.png" alt="upper"></a>
-</div>
+  </div>
 
   <footer>
     <p>©2020, SCRUMs. All Rights Reserved</p>
@@ -250,4 +322,5 @@
   <script src="js/main.js"></script>
   <script src="js/slick.js"></script>
 </body>
+
 </html>
