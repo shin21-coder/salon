@@ -14,7 +14,7 @@ $(document).ready(function () {
     prevArrow: '<img src="../images/arrow.png" class="slide-arrow next-arrow">',
     nextArrow: '<img src="../images/arrowright.png" class="slide-arrow prev-arrow">',
     accessibility: false,
-    centerPadding: "5%",
+    centerPadding: "7%",
     // variableWidth: true,
     centerMode: true,
 
@@ -25,7 +25,7 @@ $(document).ready(function () {
           slidesToShow: 1,
           slidesToScroll: 2,
           accessibility: true,
-          centerPadding: "5%",
+          centerPadding: "7%",
           variableWidth: true,
           centerMode: true,
         }
@@ -103,7 +103,8 @@ jQuery( window ).on( 'scroll', function() {
 
 $(window).scroll(function () {
   if ($(this).scrollTop() > 100) {
-      $('#global-nav').fadeIn();
+    $('#global-nav').fadeIn();
+    $('#global_nav').removeClass('none')
   } else {
       $('#global-nav').fadeOut();
   }
@@ -134,8 +135,9 @@ $(function(){
   $(function(){
     $('.nav_toggle').on('click', function () {
       $('.nav_toggle, .nav').toggleClass('show');
+      $('.container').toggleClass('gray');
+      $('body').toggleClass('white')
       if ($('#nav').hasClass('show')) {
-        console.log("fooo");
         $('.header__toggle').text("MENU CLOSE");
       } else {
         $('.header__toggle').text("MENU OPEN");
@@ -143,5 +145,20 @@ $(function(){
     });
   })
   
+
+  $('header').hide().fadeIn(2000);
+
+
+
+  $(function(){
+    $('a[href^="#"]').click(function(){
+      var speed = 500;
+      var href= $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top-100;
+      $("html, body").animate({scrollTop:position}, speed, "swing");
+      return false;
+    });
+  });
 
 });

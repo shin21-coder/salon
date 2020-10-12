@@ -481,7 +481,6 @@ template {
 
 body {
   font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
-  overflow-x: hidden;
 }
 
 @media (max-width: 600px) {
@@ -490,9 +489,23 @@ body {
   }
 }
 
+.gray {
+  opacity: .3;
+}
+
+.white {
+  background-color: white;
+}
+
 header {
   position: relative;
   width: 90vw;
+}
+
+@media (max-width: 800px) {
+  header {
+    width: 100vw;
+  }
 }
 
 header img {
@@ -523,7 +536,7 @@ header img {
   padding: 13.1px 32.7px;
   background-color: white;
   position: absolute;
-  top: 69px;
+  top: 20px;
   left: 0;
 }
 
@@ -572,6 +585,10 @@ header img {
   border: 1px solid #707070;
   border-radius: 50px;
   cursor: pointer;
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  transition: -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
 }
 
 @media (max-width: 900px) {
@@ -623,10 +640,10 @@ header img {
 @media (max-width: 700px) {
   .about__scrums {
     position: absolute;
-    left: 20px;
+    right: -10px;
     background-color: white;
     z-index: 3;
-    padding: 4% 11%;
+    padding: 8% 13% 8% 11%;
     margin: 0 auto;
     top: 186px;
     width: 350px;
@@ -650,6 +667,7 @@ header img {
 @media (max-width: 700px) {
   .about__spimage {
     display: block;
+    width: 100%;
   }
 }
 
@@ -675,7 +693,7 @@ header img {
 .about__theme::after {
   content: "";
   position: absolute;
-  width: 319px;
+  width: 246px;
   height: 1px;
   background-color: #004286;
   bottom: 0;
@@ -746,7 +764,7 @@ header img {
 .service__themebox::after {
   content: "";
   position: absolute;
-  width: 400px;
+  width: 40%;
   height: 1px;
   background-color: #004286;
   bottom: 0;
@@ -829,7 +847,7 @@ header img {
 .service__theme-sp {
   font-size: 20px;
   padding: 11px 0 11px 20.7px;
-  border-left: 2px solid #002869;
+  border-left: 4px solid #002869;
   margin-bottom: 32.7px;
   color: #606060;
   display: none;
@@ -844,12 +862,16 @@ header img {
 @media (max-width: 470px) {
   .service__theme-sp {
     font-size: 13px;
+    padding-left: 10px;
   }
 }
 
-.service__spblock {
-  padding-left: 20px;
-  width: 50%;
+@media (max-width: 1100px) {
+  .service__spblock {
+    padding-left: 20px;
+    padding-top: 20px;
+    width: 50%;
+  }
 }
 
 .service__text {
@@ -866,7 +888,7 @@ header img {
 }
 
 .works {
-  margin: 150px 125px 0 100px;
+  margin: 150px 100px 0 100px;
   background-color: white;
 }
 
@@ -895,7 +917,7 @@ header img {
 .works__themebox::after {
   content: "";
   position: absolute;
-  width: 400px;
+  width: 40%;
   height: 1px;
   background-color: #004286;
   bottom: 0;
@@ -931,8 +953,16 @@ header img {
 
 /*slick setting*/
 .slider {
-  max-width: 687px;
+  width: 57vw;
+  max-width: 747px;
   margin: 0 auto;
+}
+
+@media (min-width: 375px) and (max-width: 680px) {
+  .slider {
+    min-width: 0;
+    width: 270px;
+  }
 }
 
 .slick-prev:before,
@@ -942,14 +972,14 @@ header img {
 
 .slide-arrow {
   position: absolute;
-  top: 35%;
-  left: -5%;
+  top: 27%;
+  left: -7%;
   margin-top: -15px;
 }
 
 .prev-arrow {
   position: absolute;
-  left: 102%;
+  left: 103%;
 }
 
 .block {
@@ -1025,11 +1055,12 @@ header img {
 
 .works__margin {
   margin-right: 30px;
+  margin-left: 30px;
 }
 
 .project {
   margin-top: 50px;
-  padding: 50px 4.5% 0 4%;
+  padding: 50px 4.5% 50px 4%;
   background-color: white;
 }
 
@@ -1051,7 +1082,7 @@ header img {
 .project__themebox::after {
   content: "";
   position: absolute;
-  width: 400px;
+  width: 40%;
   height: 1px;
   background-color: #004286;
   bottom: 0;
@@ -1166,13 +1197,13 @@ header img {
 
 .member {
   background-color: white;
-  margin: 250px 0 0 0;
+  margin: 250px 50px 0 50px;
 }
 
 @media (max-width: 600px) {
   .member {
     margin: 250px 0 0 0;
-    padding: 50px 10% 0 10%;
+    padding: 50px 10% 50px 10%;
   }
 }
 
@@ -1194,7 +1225,7 @@ header img {
 .member__themebox::after {
   content: "";
   position: absolute;
-  width: 400px;
+  width: 40%;
   height: 1px;
   background-color: #004286;
   bottom: 0;
@@ -1253,19 +1284,31 @@ header img {
 }
 
 .slick {
-  max-width: 830px;
+  max-width: 840px;
   text-align: center;
   margin: 0 auto;
 }
 
+@media (min-width: 375px) and (max-width: 680px) {
+  .slick {
+    width: 270px;
+  }
+}
+
+@media screen and (min-width: 681px) and (max-width: 940px) {
+  .slick {
+    width: 580px;
+  }
+}
+
 .contact {
-  margin: 250px 0 0 0;
+  margin: 70px 0 0 0;
   background-color: white;
 }
 
 @media (max-width: 600px) {
   .contact {
-    margin: 250px 0 0 0;
+    margin: 70px 0 0 0;
     padding: 50px 10% 10% 10%;
   }
 }
@@ -1288,7 +1331,7 @@ header img {
 .contact__themebox::after {
   content: "";
   position: absolute;
-  width: 400px;
+  width: 40%;
   height: 1px;
   background-color: #004286;
   bottom: 0;
@@ -1369,6 +1412,10 @@ header img {
   text-align: center;
   display: block;
   cursor: pointer;
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  transition: -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
 }
 
 .submit__button :hover {
@@ -1390,6 +1437,10 @@ footer {
   right: 10%;
   bottom: 10%;
   cursor: pointer;
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  transition: -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
 }
 
 #goto_top:hover {
@@ -1424,8 +1475,32 @@ footer {
   transition: all 1s;
 }
 
+header {
+  background-color: white;
+}
+
+@media (max-width: 800px) {
+  header {
+    margin-top: 50px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .header__pcimage {
+    position: relative;
+    height: 400px;
+    padding-left: 30px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
 .header__sp {
   position: fixed;
+  top: 0;
+  left: 0;
   height: 50px;
   background-color: white;
   font-family: 'Josefin Sans', sans-serif;
@@ -1442,8 +1517,9 @@ footer {
 }
 
 .header__toggle {
-  margin: 20px 100px;
   text-align: right;
+  width: 87vw;
+  margin: 20px 0;
 }
 
 @media (max-width: 1160px) {
@@ -1461,6 +1537,8 @@ footer {
             writing-mode: horizontal-tb;
     padding: 3%;
     font-size: 13px;
+    top: 220px;
+    right: 0;
   }
 }
 
@@ -1477,6 +1555,7 @@ footer {
   height: 1.5rem;
   left: 90vw;
   top: -36px;
+  cursor: pointer;
 }
 
 .nav_toggle i {
@@ -1507,7 +1586,7 @@ footer {
           transform: translateY(0px) rotate(45deg);
 }
 
-nav {
+.nav {
   position: fixed;
   top: 3rem;
   width: 80%;
@@ -1541,10 +1620,18 @@ nav {
 .nav_menu_li:hover::after {
   content: "";
   background: #004286;
-  width: 34%;
+  width: 10%;
   height: 1px;
   position: absolute;
   bottom: -7px;
-  left: 118px;
+  left: 253px;
+}
+
+.slide-arrow {
+  cursor: pointer;
+}
+
+.none {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

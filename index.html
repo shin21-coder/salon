@@ -10,7 +10,20 @@
 </head>
 
 <body>
-  <header>
+  <nav class="nav" id="nav">
+    <ul class="nav_menu_ul">
+      <li class="nav_menu_li"><a href="#about">CONCEPT</a>
+      </li>
+      <li class="nav_menu_li"><a href="#service"> SERVICE</a></li>
+      <li class="nav_menu_li"><a href="#works"> WORKS</a></li>
+      <li class="nav_menu_li"> <a href="#project"> PROJECTFLOW</a></li>
+      <li class="nav_menu_li"><a href="#voice"> VOICE</a></li>
+      <li class="nav_menu_li"><a href="#member"> MEMBER</a></li>
+    </ul>
+
+  </nav>
+  <div class="container">
+  <header > 
     <div class="header__sp">
       <p class="header__toggle">MENU OPEN
         <div class="nav_toggle">
@@ -19,18 +32,7 @@
       </div>
     </p>
     </div>
-    <nav class="nav" id="nav">
-      <ul class="nav_menu_ul">
-        <li class="nav_menu_li">CONCEPT
-        </li>
-        <li class="nav_menu_li">SERVICE</li>
-        <li class="nav_menu_li">WORKS</li>
-        <li class="nav_menu_li">PROJECTFLOW</li>
-        <li class="nav_menu_li">VOICE</li>
-        <li class="nav_menu_li">MEMBER</li>
-      </ul>
-
-    </nav>
+ 
     <!-- <img src="images/spheader.png" alt="header画像" class="header__spimage"> -->
     <img src="images/header.png" alt="header画像" class="header__pcimage">
     <div class="header__textbox">
@@ -41,24 +43,24 @@
     <div class="header__logobox">
       <img src="images/logo.png" alt="scrums">
     </div>
-    <nav class="header__nav" id="global-nav">
+    <nav class="header__nav none" id="global-nav">
       <ul class="header__lists">
-        <li class="header__list">CONCEPT
+        <li class="header__list"><a href="#about">CONCEPT</a>
         </li>
-        <li class="header__list">SERVICE</li>
-        <li class="header__list">WORKS</li>
-        <li class="header__list">PROJECTFLOW</li>
-        <li class="header__list">VOICE</li>
-        <li class="header__list">MEMBER</li>
+        <li class="header__list"><a href="#service"> SERVICE</a></li>
+        <li class="header__list"><a href="#works"> WORKS</a></li>
+        <li class="header__list"> <a href="#project"> PROJECTFLOW</a></li>
+        <li class="header__list"><a href="#voice"> VOICE</a></li>
+        <li class="header__list"><a href="#member"> MEMBER</a></li>
       </ul>
 
     </nav>
     <div class="header__mail">
-      <img src="images/mailicon.svg" alt="mail">
+      <a href="#contact"><img src="images/mailicon.svg" alt="mail"></a>
     </div>
   </header>
 
-  <section class="about fadein">
+  <section class="about fadein" id="about">
     <div class="about__flex">
       <div class="about__image">
         <img src="images/scrums-sp.png" alt="scrumsとは" class="about__spimage">
@@ -80,7 +82,7 @@
     </div>
   </section>
 
-  <section class="service fadein">
+  <section class="service fadein" id="service">
     <div class="service__themebox">
       <h2 class="service__service">SERVICE</h2>
       <p class="service__wecan">私たちのできること</p>
@@ -121,7 +123,7 @@
       </div>
     </div>
   </section>
-  <section class="works fadein">
+  <section class="works fadein" id="works">
     <div class="works__themebox">
       <h2 class="works__service">WORKS</h2>
       <p class="works__wecan">制作実績</p>
@@ -151,7 +153,7 @@
       </li>
     </ul>
   </section>
-  <section class="project fadein">
+  <section class="project fadein" id="project"> 
     <div class="project__themebox">
       <h2 class="project__service">PROJECT FLOW</h2>
       <p class="project__wecan">制作の流れ</p>
@@ -214,7 +216,7 @@
     </div>
   </section>
 
-  <section class="about fadein">
+  <section class="about fadein" id="voice">
     <div class="about__flex">
       <div class="about__image">
         <img src="images/voice-sp.png" alt="お客様の声" class="about__spimage">
@@ -232,7 +234,7 @@
     </div>
   </section>
 
-  <section class="member fadein">
+  <section class="member fadein" id="member">
     <div class="member__themebox">
       <h2 class="member__service">MEMBER</h2>
       <p class="member__wecan">制作メンバー</p>
@@ -278,7 +280,7 @@
     </ul>
   </section>
 
-  <section class="contact fadein">
+  <section class="contact fadein" id="contact">
     <div class="contact__themebox">
       <h2 class="contact__service">CONTACT US</h2>
       <p class="contact__wecan">お問い合わせ</p>
@@ -317,6 +319,7 @@
   <footer>
     <p>©2020, SCRUMs. All Rights Reserved</p>
   </footer>
+</div>
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <script type="text/javascript" src="js/slick.min.js"></script>
   <script src="js/main.js"></script>

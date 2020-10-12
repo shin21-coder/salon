@@ -1,60 +1,22 @@
+// const links = document.querySelectorAll('a[href^="#"]');
+// console.log(links);
 
-  // $('.slider').slick({
-    
+// // 各aタグにクリックイベントを設定
+// for ( let i = 0; i < links.length; i++ ) {
+//   links[i].addEventListener('click', (e) => {
+//     // デフォルトのイベントをキャンセル
+//     e.preventDefault();
 
-  //   // dots: true,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1,
-  //   variableWidth: true,
-  //   prevArrow: '<img src="../images/arrow.png" class="slide-arrow next-arrow">',
-  //   nextArrow: '<img src="../images/arrowright.png" class="slide-arrow prev-arrow">',
-  //   accessibility: false,
-  //   centerPadding: "5%",
-  //   variableWidth: true,
-  //   centerMode: true,
+//     // 対象（aタグ）のY軸の絶対座標を取得
+//     const elemY = links[i].getBoundingClientRect().top;
+//     // 現在のスクロール量を取得
+//     const scrollY = window.pageYOffset;
+//     // 対象までのスクロール量を算出
+//     const top = elemY - scrollY;
 
-  //   responsive: [
-  //     {
-  //       breakpoint: 750,
-  //       settings: {
-  //         slidesToShow: 3,
-  //         slidesToScroll: 1,
-  //         accessibility: true,
-  //         centerPadding: "5%",
-  //         variableWidth: true,
-  //         centerMode: true,
-  //       }
-  //     },
-    
-  //   ]
-  // });
-  // $('.slick').slick({
-
-  //   // dots: true,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1,
-  //   variableWidth: true,
-  //   prevArrow: '<img src="../images/arrow.png" class="slide-arrow next-arrow">',
-  //   nextArrow: '<img src="../images/arrowright.png" class="slide-arrow prev-arrow">',
-  //   accessibility: true,
-  //   centerPadding: "5%",
-  //   variableWidth: true,
-  //   centerMode: true,
-
-  //   responsive: [
-  //     {
-  //       breakpoint: 750,
-  //       settings: {
-  //         slidesToShow: 3,
-  //         slidesToScroll: 1,
-  //         accessibility: true,
-  //         centerPadding: "5%",
-  //         variableWidth: true,
-  //         centerMode: true,
-  //       }
-  //     },
-
-    
-  //   ]
-  // });
-
+//     window.scroll({
+//       top: top, // スクロール量の設定
+//       behavior: 'smooth' // スクロール動作の設定
+//     });
+//   });
+// }
